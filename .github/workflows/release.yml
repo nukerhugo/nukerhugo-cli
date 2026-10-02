@@ -4,7 +4,111 @@ on:
   push:
     tags: ["v*"]
 jobs:
+  dist:name: Release
+# Push a tag like v0.1.0 to build and publish.
+on:
+  push:
+    tags: ["v*"]
+jobs:
   dist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install build
+      - run: |
+          python -m build packages/nukerhugo --outdir dist/nukerhugo
+          python -m build packages/nukerhugo-code --outdir dist/nukerhugo-code
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  # Publishes with PyPI "trusted publishing" (no token stored). The CLI goes first
+  # because nukerhugo-code depends on it. PyPI will not accept two pending publishers with the
+  # same repo/workflow/environment, so the two jobs use different environments (pypi, pypi-code).
+  pypi-cli:
+    needs: dist
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist/nukerhugo
+  pypi-code:
+    needs: pypi-cli
+    runs-on: ubuntu-latest
+    environment: pypi-code
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist/nukerhugo-code
+
+  binaries:
+    needs: dist
+    strategy:
+      matrix:
+        include:
+          - {os: windows-latest, tag: windows-x64, ext: .exe}
+          - {os: ubuntu-latest, tag: linux-x64, ext: ""}
+          - {os: macos-latest, tag: macos-arm64, ext: ""}
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install pyinstaller
+      - name: Build both executables
+        shell: bash
+        run: |
+          export PYTHONPATH="$PWD/packages/nukerhugo:$PWD/packages/nukerhugo-code"
+          python -m PyInstaller --onefile --name nukerhugo packaging/entry_nukerhugo.py
+          python -m PyInstaller --onefile --name nukerhugo-code packaging/entry_code.py
+          mkdir out
+          cp dist/nukerhugo${{ matrix.ext }} out/nukerhugo-${{ matrix.tag }}${{ matrix.ext }}
+          cp dist/nukerhugo-code${{ matrix.ext }} out/nukerhugo-code-${{ matrix.tag }}${{ matrix.ext }}
+      - name: Smoke test
+        shell: bash
+        run: |
+          ./dist/nukerhugo${{ matrix.ext }} --version
+          ./dist/nukerhugo-code${{ matrix.ext }} --version
+          ./dist/nukerhugo${{ matrix.ext }} code --version
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bin-${{ matrix.tag }}
+          path: out/
+
+  github-release:
+    needs: [binaries, pypi-code]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: bin-*
+          path: out
+          merge-multiple: true
+      - run: cd out && sha256sum * > SHA256SUMS.txt
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: out/*
+          generate_release_notes: true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
