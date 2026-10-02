@@ -111,11 +111,15 @@ class ToolTests(unittest.TestCase):
         self.assertIn("invalid regex", self.tb.run("grep", {"pattern": "("}))
 
     def test_bash(self):
-        out = self.tb.run("bash", {"command": "echo hi; echo err 1>&2; exit 3"})
+        if os.name == "nt":  # the tool runs PowerShell there
+            cmd, slow = "echo hi; [Console]::Error.WriteLine('err'); exit 3", "Start-Sleep 5"
+        else:
+            cmd, slow = "echo hi; echo err 1>&2; exit 3", "sleep 5"
+        out = self.tb.run("bash", {"command": cmd})
         self.assertIn("hi", out)
         self.assertIn("err", out)
         self.assertIn("[exit 3]", out)
-        out = self.tb.run("bash", {"command": "sleep 5", "timeout": 1})
+        out = self.tb.run("bash", {"command": slow, "timeout": 1})
         self.assertIn("timed out", out)
 
     def test_catastrophic_always_asks(self):
@@ -221,7 +225,8 @@ class ConfigTests(unittest.TestCase):
             cfg = config_mod.load()
             cfg.api_key, cfg.key_source = "secret-from-file-1234", "file"
             path = config_mod.save(cfg, keys=("api_key", "model"))
-            self.assertEqual(stat.S_IMODE(path.stat().st_mode), 0o600)
+            if os.name != "nt":  # Windows has no POSIX permission bits
+                self.assertEqual(stat.S_IMODE(path.stat().st_mode), 0o600)
             os.environ["NUKERHUGO_API_KEY"] = "env-key-should-not-persist"
             cfg2 = config_mod.load({"model": "m2"})
             self.assertEqual(cfg2.api_key, "env-key-should-not-persist")
