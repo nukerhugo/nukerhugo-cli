@@ -13,4 +13,4 @@ nukerhugo code
 ```
 
 Develop: `python tests/test_all.py && python tests/test_core.py` (Python 3.9+, no dependencies).
-Publishing: see [docs/RELEASING.md](docs/RELEASING.md).
+
