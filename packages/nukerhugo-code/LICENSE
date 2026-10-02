@@ -1,0 +1,163 @@
+Nukerhugo Source License (NSL) v1.2 — Nukerhugo Code
+Copyright 2026 Nukerhugo (https://nukerhugo.nl/)
+
+All rights reserved except as explicitly granted below.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. DEFINITIONS
+
+   "The Author" refers to Nukerhugo (https://nukerhugo.nl/).
+   "The Software" refers to Nukerhugo Code: the source code,
+   documentation, and all associated files in the repository this
+   license is distributed with, and the builds of it that the Author
+   publishes ("Official Builds").
+   "Nukerhugo AI Service" refers to the AI API operated by the Author
+   at https://nukerhugo.nl/ai/, including its Enterprise API, and any
+   successor service operated by the Author.
+   "Personal Use" means use by a single individual for non-commercial
+   purposes on their own devices, or within a small private group such
+   as a household or a non-commercial team, with no public
+   distribution.
+   "Fork" means any copy, derivative work, or modified version of the
+   Software intended for redistribution or public sharing.
+   "Your Output" means files, code, text, and other content that you
+   create, change, or obtain by using the Software, excluding the
+   Software itself.
+   "Commercial Use" means any use of the Software, in whole or in part,
+   that directly or indirectly generates revenue, is used in a product
+   or service offered for payment, or is used within a commercial
+   organization to provide business value. Commercial Use does not
+   include the uses permitted by Sections 2(d) and 2(e).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. PERMISSIONS — WHAT YOU MAY DO WITHOUT ASKING
+
+   Subject to the conditions in Section 4, you are granted the following
+   rights free of charge:
+
+   a) VIEW — You may read and study the Software's source code.
+
+   b) PERSONAL USE — You may run, modify, and use the Software for
+      Personal Use as defined above.
+
+   c) PRIVATE SHARING — You may share the Software or your modifications
+      privately with individuals or within a small private group (e.g. a
+      friend, colleague, or internal team), provided no public
+      redistribution occurs. Using a shared copy remains subject to
+      Sections 2(d) and 3(b).
+
+   d) USE WITH THE NUKERHUGO AI SERVICE — You may run the Software,
+      including your own private modifications of it, connected to the
+      Nukerhugo AI Service, for your own work and for the internal work
+      of your organization, whether or not that organization is
+      commercial. Your use of the Nukerhugo AI Service remains subject
+      to that service's own terms, plans, and limits. This permission
+      does not allow public distribution of modified versions
+      (Section 3a), selling, licensing, hosting, or otherwise offering
+      the Software itself to others as a product or service, or using
+      the Software commercially with services other than the Nukerhugo
+      AI Service.
+
+   e) YOUR OUTPUT — As between you and the Author, Your Output belongs
+      to you. You may use it for any purpose, including commercially.
+      Using Your Output is not Commercial Use of the Software. Terms of
+      the AI model or service that generated it may also apply.
+
+   f) CONTRIBUTING — You may create a Fork on a public code-hosting
+      platform solely to prepare a contribution to the Author's
+      official repository, provided that the Fork is not otherwise
+      used, promoted, or distributed.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3. RESTRICTIONS — WHAT YOU MAY NOT DO WITHOUT PERMISSION
+
+   The following require explicit prior written permission from the Author:
+
+   a) FORKS & PUBLIC REDISTRIBUTION — Except as allowed in Section 2(f),
+      you may not publicly publish, release, or distribute the Software
+      or a Fork of it (including on platforms such as GitHub, GitLab,
+      package indexes, app stores, or any other public repository or
+      website) without written permission from the Author.
+
+   b) COMMERCIAL USE — Except as allowed in Sections 2(d) and 2(e), you
+      may not use the Software, in whole or in part, for any Commercial
+      Use without explicit written permission from the Author. The
+      Software is provided as a free resource: except as allowed in
+      Sections 2(d) and 2(e), you may not earn revenue from the
+      Software itself, directly or indirectly (for example by selling,
+      licensing, or hosting it, or by including it in a paid product or
+      service).
+
+   c) REBRANDING — You may not remove or alter copyright notices,
+      credits, or this license file, and may not present the Software
+      as your own original work. You may not use the names "Nukerhugo"
+      or "Nukerhugo Code" for any Fork or derived work.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4. CONDITIONS
+
+   Any use permitted under Section 2 is subject to the following:
+
+   a) This license file and the copyright notice must be retained in
+      all copies or portions of the Software.
+
+   b) You may not sublicense the Software or grant others rights beyond
+      what this license permits.
+
+   c) Any permitted Fork or redistribution must include a clear
+      reference back to the original repository and credit the Author.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. CONTRIBUTIONS
+
+   If you submit a contribution (such as a pull request) to the
+   Author's official repository, you grant the Author a perpetual,
+   worldwide, non-exclusive, royalty-free, irrevocable license to use,
+   modify, sublicense, and distribute that contribution as part of the
+   Software, under this or any other license terms. You confirm that
+   you have the right to grant this license.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6. REQUESTING PERMISSION
+
+   To request permission for a Fork, public redistribution, or
+   Commercial Use, contact the Author via https://nukerhugo.nl/
+
+   Permission grants must be explicit and in writing. Silence or
+   lack of response does not constitute permission.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+7. TERMINATION
+
+   Any rights granted under this license terminate automatically and
+   immediately if you violate any of its terms. Upon termination you
+   must destroy all copies of the Software in your possession.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+8. DISCLAIMERS
+
+   a) NO WARRANTY — THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY
+      OF ANY KIND, EXPRESS OR IMPLIED. THE AUTHOR SHALL NOT BE LIABLE
+      FOR ANY DAMAGES ARISING FROM THE USE OF THE SOFTWARE.
+
+   b) AI AND AUTOMATED ACTIONS — The Software lets an AI model read,
+      create, change, and delete files and run commands on your
+      computer. AI output can be wrong or harmful. You are responsible
+      for reviewing what the Software does, for keeping backups, and
+      for the permissions you grant it. THE AUTHOR IS NOT LIABLE FOR
+      DATA LOSS, DAMAGE, OR COSTS RESULTING FROM ACTIONS TAKEN BY THE
+      SOFTWARE OR BY THE AI MODEL IT CONNECTS TO.
+
+   c) SERVICES — Access to the Nukerhugo AI Service is governed by that
+      service's own terms and limits, which may change. This license
+      does not guarantee that the service is or remains available.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
