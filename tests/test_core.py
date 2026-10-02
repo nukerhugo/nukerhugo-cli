@@ -108,6 +108,7 @@ class Umbrella(unittest.TestCase):
              mock.patch("importlib.util.find_spec", return_value=None):
             self.assertIsNone(cli.tool_argv("code", [], {}))
 
+    @unittest.skipIf(os.name == "nt", "uses a shell-script tool")
     def test_discovery_finds_executables(self):
         d = Path(tempfile.mkdtemp())
         f = d / "nukerhugo-demo"
