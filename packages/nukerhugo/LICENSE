@@ -1,0 +1,175 @@
+Nukerhugo Source License (NSL) v1.1 — Nukerhugo CLI
+Copyright 2026 Nukerhugo (https://nukerhugo.nl/)
+
+All rights reserved except as explicitly granted below.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. DEFINITIONS
+
+   "The Author" refers to Nukerhugo (https://nukerhugo.nl/).
+   "The Software" refers to the Nukerhugo CLI: the source code,
+   documentation, and all associated files in the repository this
+   license is distributed with, and the builds of it that the Author
+   publishes ("Official Builds").
+   "Nukerhugo Services" refers to the services operated by the Author
+   at https://nukerhugo.nl/, including the Nukerhugo AI Service and its
+   Enterprise API, and any successor services.
+   "Your Organization" means the company, institution, or other legal
+   entity you work for or own, together with its affiliates, or, if
+   you use the Software only for yourself, you alone.
+   "Modified Version" means any copy of the Software that has been
+   changed in any way.
+   "Public Distribution" means making the Software or a Modified
+   Version available to anyone outside Your Organization and the
+   contractors working for it, for example by publishing, hosting,
+   mirroring, or bundling it, whether or not for payment.
+   "Extension" means a separate program, package, or plugin that is
+   launched by, or communicates with, the Software, and that does not
+   contain a copy of the Software's code.
+   "Your Output" means files, code, text, and other content that you
+   create, change, or obtain by using the Software, excluding the
+   Software itself.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. PERMISSIONS — WHAT YOU MAY DO WITHOUT ASKING
+
+   Subject to Sections 3 and 4, you are granted the following rights
+   free of charge:
+
+   a) VIEW — You may read and study the Software's source code.
+
+   b) USE — You may run the Software for any purpose, including
+      commercial purposes, as an individual or on behalf of any
+      organization of any size, on any number of devices.
+
+   c) INTERNAL MODIFICATION — You may modify the Software for your own
+      use or for Your Organization's internal use (for example to
+      support a corporate proxy, certificate store, or internal
+      infrastructure). A Modified Version may not be Publicly
+      Distributed (Section 3a), and Section 3(d) still applies.
+
+   d) INTERNAL SHARING — You may copy the Software, including a
+      Modified Version made under Section 2(c), and deploy or share it
+      within Your Organization and with the contractors working for it,
+      provided that no Public Distribution occurs.
+
+   e) EXTENSIONS — You and others may create, publish, and sell
+      Extensions under terms of your own choosing. An Extension is an
+      independent work and is not a Modified Version. Section 3(c)
+      applies to how an Extension refers to the Author and the
+      Software.
+
+   f) YOUR OUTPUT — As between you and the Author, Your Output belongs
+      to you. You may use it for any purpose, including commercially.
+      Terms of the AI model or service that generated it may also
+      apply.
+
+   g) CONTRIBUTING — You may create a copy of the Software on a public
+      code-hosting platform solely to prepare a contribution to the
+      Author's official repository, provided that the copy is not
+      otherwise used, promoted, or distributed.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3. RESTRICTIONS — WHAT YOU MAY NOT DO WITHOUT PERMISSION
+
+   The following require explicit prior written permission from the
+   Author:
+
+   a) PUBLIC DISTRIBUTION — Except as allowed in Section 2(g), you may
+      not publish, release, distribute, mirror, or host the Software or
+      a Modified Version for anyone outside Your Organization,
+      including on platforms such as GitHub, GitLab, package indexes,
+      container registries, app stores, or any other repository or
+      website.
+
+   b) SELLING AND SERVICES — You may not sell, license, sublicense,
+      rent, or host the Software or a Modified Version as a product or
+      service for others, or include it in a product or service offered
+      to others. Using the Software to do your own work, including paid
+      work for clients, is not restricted by this clause.
+
+   c) REBRANDING AND NAMES — You may not remove or alter copyright
+      notices, credits, or this license file, and may not present the
+      Software as your own original work. You may not use the names
+      "Nukerhugo" or "Nukerhugo CLI", or the Author's logos, for a
+      Modified Version, or in a way that suggests that an Extension or
+      other product is made, endorsed, or certified by the Author.
+      Factual statements such as "works with Nukerhugo CLI" are
+      allowed.
+
+   d) CIRCUMVENTION — You may not modify or use the Software to
+      circumvent, evade, or interfere with the usage limits,
+      authentication, billing, or access controls of the Nukerhugo
+      Services, for example by creating accounts or keys to avoid
+      limits.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4. CONDITIONS
+
+   Any use permitted under Section 2 is subject to the following:
+
+   a) This license file and the copyright notice must be retained in
+      all copies or portions of the Software.
+
+   b) You may not sublicense the Software or grant others rights beyond
+      what this license permits.
+
+   c) If an Extension contains a copy of any part of the Software's
+      code, that part remains subject to this license, and the
+      Extension may not be Publicly Distributed with it without
+      permission under Section 3(a).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. CONTRIBUTIONS
+
+   If you submit a contribution (such as a pull request) to the
+   Author's official repository, you grant the Author a perpetual,
+   worldwide, non-exclusive, royalty-free, irrevocable license to use,
+   modify, sublicense, and distribute that contribution as part of the
+   Software, under this or any other license terms. You confirm that
+   you have the right to grant this license.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6. REQUESTING PERMISSION
+
+   To request permission for anything this license does not allow, such
+   as Public Distribution or selling, contact the Author via
+   https://nukerhugo.nl/
+
+   Permission grants must be explicit and in writing. Silence or
+   lack of response does not constitute permission.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+7. TERMINATION
+
+   Any rights granted under this license terminate automatically and
+   immediately if you violate any of its terms. Upon termination you
+   must destroy all copies of the Software in your possession.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+8. DISCLAIMERS
+
+   a) NO WARRANTY — THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY
+      OF ANY KIND, EXPRESS OR IMPLIED. THE AUTHOR SHALL NOT BE LIABLE
+      FOR ANY DAMAGES ARISING FROM THE USE OF THE SOFTWARE.
+
+   b) KEYS AND EXTENSIONS — The Software stores your API key and can
+      launch other programs, including Extensions and AI agents, which
+      may have access to it. You are responsible for protecting your
+      keys, for the Extensions you install, and for what the programs
+      you launch do. THE AUTHOR IS NOT LIABLE FOR LOSSES RESULTING FROM
+      THEM.
+
+   c) SERVICES — Access to the Nukerhugo Services is governed by their
+      own terms and limits, which may change. This license does not
+      guarantee that any service is or remains available.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
