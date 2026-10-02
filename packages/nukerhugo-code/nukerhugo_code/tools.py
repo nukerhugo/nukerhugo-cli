@@ -58,12 +58,15 @@ def shell_argv(command: str, platform: str = sys.platform, mode: str = "auto") -
     if resolve_shell(mode, platform) == "powershell":
         exe = shutil.which("pwsh") or shutil.which("powershell") or "powershell.exe"
         script = ("try{[Console]::OutputEncoding=[System.Text.Encoding]::UTF8}catch{};"
+                  "try{$PSStyle.OutputRendering='PlainText'}catch{};"  # no colour codes in errors
                   "$ProgressPreference='SilentlyContinue';" + command)
         encoded = base64.b64encode(script.encode("utf-16-le")).decode("ascii")
         if len(encoded) > MAX_ENCODED_COMMAND:
             raise ToolError("command is too long for PowerShell; write it to a script file "
                             "with write_file and run that instead")
-        return [exe, "-NoProfile", "-NonInteractive", "-EncodedCommand", encoded]
+        # -OutputFormat Text stops PowerShell wrapping stderr in "#< CLIXML" when it is piped.
+        return [exe, "-NoProfile", "-NonInteractive", "-OutputFormat", "Text",
+                "-EncodedCommand", encoded]
     sh = shutil.which("bash") or shutil.which("sh") or "/bin/sh"
     return [sh, "-c", command]
 
@@ -197,7 +200,7 @@ class ToolBox:
 
     def _rel(self, path: Path) -> str:
         try:
-            return str(path.relative_to(self.root))
+            return path.relative_to(self.root).as_posix()  # same style on every OS
         except ValueError:
             return str(path)
 
